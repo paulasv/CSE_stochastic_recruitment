@@ -56,7 +56,6 @@ for(i in 1:length(stocks)){
             diag(mod$W) <- c(0, 0)
             return(mod)
         }
-        ## think of running in nlminb to harmonise optimisers (harmonize optimizers ;o)
         fit_ti <- dlmMLE(sub_dat$y, parm = log(0.2),
                          build_ti, method = "L-BFGS-B")
         print("time invariant")
